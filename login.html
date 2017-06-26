@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Sam</title>
+        <!-- METAS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- CSS -->
+        <link href="css/materialize.css" rel="stylesheet" type="text/css">
+        <link href="css/ionicons.css" rel="stylesheet" type="text/css">
+        <link href="css/estilo2.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        
+        <div id="login">
+            <div class="header">
+                <h1 class="comforta white-text">
+                    <b>Objetive TI</b>
+                    <div class="divider white"></div>
+                </h1>
+
+                <p class="white-text">Atendimento com rapidez e qualidade para garantir sua satisfação.</p>
+            </div>
+            <form class="white">
+                <h6 class="light-blue-text center-align mini-title">
+                    <b>Atendimento ao Cliente</b>
+                </h6>
+                <img src="img/logo.png" class="responsive-img">
+                <div class="input-field">
+                    <h6 class="mini-title"><b>Email:</b></h6>
+                    <input type="text" name="email" id="email" placeholder="email@email.com" required>
+                </div>
+                <div class="input-field">
+                    <h6 class="mini-title"><b>Senha:</b></h6>
+                    <i class="mdi-image-remove-red-eye ver click circle light-blue-text"></i>
+                    <input type="password" name="email" id="senha" placeholder="sua senha" required>
+                </div>
+                <button class="btn light-blue white-text">Entrar</button>
+            </form>
+        </div>
+
+        <script src="js/jquery.js"></script>
+        <script src="js/materialize.js"></script>
+        <script>
+            function verSenha(){
+                $(".ver").click(function(){
+                    var tipo = $(this).next("input").attr("type");
+                    if (tipo == 'password'){
+                        $(this).next("input").attr("type", "text");
+                    } else {
+                        $(this).next("input").attr("type", "password");
+                    }
+                })
+            } verSenha();
+        </script>
+    </body>
+</html>

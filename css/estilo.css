@@ -1,0 +1,525 @@
+/* cabecalho */
+
+body{
+    background-color: #ebeff1;
+}
+.nm{
+    margin: 0 !important;
+}
+.np{
+    padding: 0 !important;
+}
+.suave, .suave:hover{
+    transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -ms-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+}
+.click{
+    cursor: pointer;
+}
+.quick{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#login{
+    width: 700px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 350px);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .6);
+}
+#login .capa{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+#login .capa img{
+    width: 100%;
+}
+#login form{
+    width: 350px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 40px;
+}
+
+#topo{
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #DDD;
+}
+#topo .logo{
+    width: 120px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    float: left;
+}
+#topo .pesquisa{
+    width: 500px;
+    height: 38px;
+    float: left;
+    margin-top: 11px;
+    margin-left: 12px;
+    border: 1px solid #DDD;
+    border-radius: 20px;
+    overflow: hidden;
+}
+#topo .pesquisa input{
+    width: calc(100% - 60px);
+    box-sizing: border-box;
+    border: none;
+    padding-left: 15px;
+    margin: 0;
+    box-shadow: none;
+    display: inline-block;
+    height: 36px;
+    float: left;
+}
+#topo .pesquisa .btn{
+    width: 60px;
+    height: 36px;
+    float: right;
+    padding: 0;
+    border-radius: 20px;
+    line-height: 36px;
+    background-color: transparent;
+    color: #333;
+    margin-right: -1px;
+}
+#topo .pesquisa .btn:hover{
+    background-color: #03a9f4;
+    color: white;
+}
+#topo .notificacoes{
+    height: 38px;
+    float: right;
+    margin: 11px 12px 0 0;
+}
+#topo .notificacoes ul{
+    margin: 0;
+}
+#topo .notificacoes ul li{
+    display: inline-block;
+    position: relative;
+}
+#topo .notificacoes ul li i{
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+}
+#topo .notificacoes ul li span{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 16px;
+    line-height: 16px;
+    font-size: 10px;
+    border-radius: 15px;
+    padding: 0 5px;
+    display: none;
+}
+#topo .notificacoes ul li.active span{
+    background-color: #03a9f4;
+    color: white;
+    display: block;
+}
+#topo .perfil{
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    float: right;
+    margin: 11px 12px 0 0;
+}
+#topo .perfil span{
+    display: block;
+    text-align: center;
+    line-height: 38px;
+    font-size: 24px;
+}
+
+#menu{
+    width: 120px;
+    height: calc(100% - 62px);
+    top: 60px;
+    position: absolute;
+    border-right: 1px solid #DDD;
+}
+#menu ul{
+    margin: 0;
+}
+#menu ul li{}
+#menu ul li a{
+    display: block;
+    height: 120px;
+    position: relative;
+    color: #333;
+}
+#menu ul li a:hover{
+    color: #03a9f4;
+}
+#menu ul li a.active{
+    background-color: #03a9f4;
+    color: white !important;
+}
+#menu ul li i{
+    display: block;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+#menu ul li h6{
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+#menu ul li:hover{
+    background-color: rgba(0, 0, 0, .05);
+}
+
+#corpo{
+    padding-top: 60px;
+    padding-left: 120px;
+    overflow: auto;
+}
+#corpo .col{
+    padding: 12px;
+}
+#corpo .box{
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .6);
+}
+#corpo .box h6{
+    margin: 0;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+#corpo .assistente{
+    width: 70px;
+    height: 70px;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    background-color: white;
+    border: 1px solid #DDD;
+    border-radius: 100px;
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .6);
+}
+#corpo .assistente .ia i{
+    width: 70px;
+    height: 70px;
+    border-radius: 100px;
+    line-height: 70px;
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+#corpo .tickets{
+    width: 400px;
+    height: calc(100% - 62px);
+    position: absolute;
+    top: 60px;
+    left: 120px;
+}
+#corpo .tickets .itens li{
+    display: block;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+    padding-left: 30px;
+}
+#corpo .tickets .itens li:hover{
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .tickets .itens li.active{
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .tickets .itens li::before,
+#corpo .tickets .itens li.active::before{
+    content: "";
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+}
+#corpo .tickets .itens li.active::before{
+    background-color: #03a9f4;
+}
+#corpo .tickets .itens li .foto{
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    position: absolute;
+    top: 23px;
+    left: 30px;
+}
+#corpo .tickets .itens li h6{
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-left: 50px;
+}
+#corpo .tickets .itens li h6 span{
+    display: block;
+    font-size: 12px;
+}
+#corpo .tickets .tabs li{
+    border: 0;
+}
+#corpo .tickets .tab a{
+    font-size: 12px;
+    text-transform: none;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+    color: grey;
+}
+#corpo .tickets .tab a.active{
+    color: white;
+}
+#corpo .tickets .indicator{
+    bottom: 11px;
+    height: 25px;
+    border-radius: 25px;
+    background-color: #03a9f4;
+}
+#corpo .tickets #abertos,
+#corpo .tickets #ematendimento,
+#corpo .tickets #aguardando,
+#corpo .tickets #encerrado{
+    height: calc(100% - 72px);
+    overflow: auto;
+}
+
+#corpo .overlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+}
+#corpo .overlay.active{
+    opacity: 1;
+    visibility: visible;
+}
+#corpo .ticket-descricao{
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 15px;
+    border-radius: 30px;
+    z-index: 10;
+}
+#corpo .ticket-descricao:hover{
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .ticket-descricao.active{
+    width: 400px;
+    height: auto;
+    left: calc(50% - 200px);
+    padding: 15px 30px;
+    border-radius: 0;
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .ticket-descricao .foto{
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+}
+#corpo .ticket-descricao.active .foto{
+    top: 23px;
+    left: 30px;
+}
+#corpo .ticket-descricao h6{
+    width: 340px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 25px;
+    padding-left: 50px;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.35s;
+    -webkit-transition-delay: 0.35s;
+    -moz-transition-delay: 0.35s;
+    -ms-transition-delay: 0.35s;
+    -o-transition-delay: 0.35s;
+}
+#corpo .ticket-descricao.active h6{
+    margin-top: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+#corpo .ticket-descricao h6 .assunto{
+    display: inline-block;
+    width: calc(100% - 30px);
+}
+#corpo .ticket-descricao h6 span,
+#corpo .ticket-descricao p span{
+    display: block;
+    font-size: 12px;
+}
+#corpo .ticket-descricao p{
+    width: 340px;
+    text-align: justify;
+    opacity: 0;
+    visibility: hidden;
+    margin-top: 30px;
+    transition-delay: 0.55s;
+    -webkit-transition-delay: 0.55s;
+    -moz-transition-delay: 0.55s;
+    -ms-transition-delay: 0.55s;
+    -o-transition-delay: 0.55s;
+}
+#corpo .ticket-descricao.active p{
+    max-height: 250px;
+    overflow: auto;
+    opacity: 1;
+    visibility: visible;
+    margin-top: 20px;
+}
+#corpo .ticket-descricao p img{
+    height: 80px;
+    float: left;
+}
+
+#corpo .chat{
+    width: calc(100% - 520px);
+    height: calc(100% - 62px);
+    position: absolute;
+    top: 60px;
+    right: 0;
+}
+#corpo .chat ul{
+    width: 100%;
+    height: calc(100% - 90px);
+    overflow: auto;
+    position: absolute;
+    left: 0;
+    bottom: 90px;
+}
+#corpo .chat ul li{
+    width: 400px;
+    transform: translateX(-50%);
+    position: relative;
+    left: calc(50% + 8px);
+    display: block;
+    padding: 15px;
+    margin-top: 10px;
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .chat ul li.esquerda::before,
+#corpo .chat ul li.direita::before{
+    content:"";
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right-color: white;
+    position: absolute;
+    top: 0;
+    right: 100%;
+}
+#corpo .chat ul li.direita::before{
+    left: 100%;
+    border-right: 0;
+    border-left: 15px solid white;
+}
+#corpo .chat ul li .foto{
+    width: 38px;
+    height: 38px;
+    border-radius: 20px;
+    position: absolute;
+    top: 5px;
+}
+#corpo .chat ul li.esquerda .foto{
+    right: calc(100% + 5px);
+}
+#corpo .chat ul li.direita .foto{
+    left: calc(100% + 5px);
+}
+#corpo .chat ul li p{
+    margin: 0;
+}
+#corpo .chat form{
+    width: 400px;
+    height: 60px;
+    position: absolute;
+    bottom: 15px;
+    left: calc(50% - 200px);
+    margin: 0;
+    box-shadow: 0px 3px 25px -10px rgba(0, 0, 0, .7);
+}
+#corpo .chat form input{
+    width: calc(100% - 85px);
+    height: 38px;
+    margin: 12px 15px;
+    float: left;
+    border: 1px solid #DDD;
+    box-shadow: none;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding-left: 15px;
+}
+#corpo .chat form input:focus{
+    border-color: #03a9f4;
+}
+#corpo .chat form .btn{
+    width: 38px;
+    height: 38px;
+    float: right;
+    padding: 0;
+    margin: 12px 15px 0 0;
+    border-radius: 20px;
+}
+#corpo .chat form .btn i{
+    font-size: 16px;
+}
+
+
+
+
+
+
+
+

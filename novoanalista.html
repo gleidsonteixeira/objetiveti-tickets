@@ -1,0 +1,181 @@
+<html>
+    <head>
+        <title>Sam</title>
+        <!-- METAS -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <!-- CSS -->
+        <link href="css/materialize.css" rel="stylesheet" type="text/css">
+        <link href="css/ionicons.css" rel="stylesheet" type="text/css">
+        <link href="css/estilo2.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Comfortaa:400,700" rel="stylesheet">
+    </head>
+
+    <body>
+        
+        <div id="topo" class="white">
+            <div class="logo light-blue comforta">
+                <a href="index.html" class="white-text">Objetive TI</a>
+            </div>
+            <div class="pesquisa">
+                <form class="blue-grey lighten-5">
+                    <input type="text" name="busca" placeholder="Pesquisar">
+                    <button class="btn z-depth-0">
+                        <i class=" ion-android-search"></i>
+                    </button>
+                </form>
+            </div>
+            <div class="notificacoes">
+                <ul>
+                    <li class="active hide">
+                        <i class="ion-android-notifications light-blue-text"></i>
+                        <span>0</span>
+                    </li>
+                    <li>
+                        <img src="img/sam.jpg" class="responsive-img circle">
+                        <div class="content white suave">
+                            <h6 class="mini-title"><b>Samarony</b></h6>
+                            <a href="#!" class="light-blue-text mini-title">Sair</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="corpo">
+            <div class="menu">
+                <div class="divider light-blue darken-1"></div>
+                <ul class="nm light-blue">
+                    <button class="btn openChamado">
+                        <b><i class="mdi-content-create left"></i> Novo Chamado</b>
+                    </button>
+                    <li>
+                        <b>Chamados <i class="mdi-hardware-keyboard-arrow-right right" style="margin-right: 15px; font-size: 20px;"></i></b>
+                        <ul class="light-blue darken-1 suave">
+                            <li>
+                                <a>Aberto <span class="right status1"></span></a>
+                            </li>
+                            <li>
+                                <a>Em Atendimento <span class="right status2"></span></a>
+                            </li>
+                            <li>
+                                <a>Aguardando Usuário <span class="right status3"></span></a>
+                            </li>
+                            <li>
+                                <a>Aguardando Terceiro <span class="right status4"></span></a>
+                            </li>
+                            <li>
+                                <a>Encerrado pelo Usuário <span class="right status5"></span></a>
+                            </li>
+                            <li>
+                                <a>Encerrado pelo Analista <span class="right status6"></span></a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="novousuario.html">Novo Usuário</a>
+                    </li>
+                    <li>
+                        <a href="novoanalista.html">Novo Analista</a>
+                    </li>
+                    <li>
+                        <b>Relatórios <i class="mdi-hardware-keyboard-arrow-right right" style="margin-right: 15px; font-size: 20px;"></i></b>
+                        <ul class="light-blue darken-1 suave">
+                            <li>
+                                <a href="relatorio.html">Relatório de Chamados</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p class="center-align" style="font-size: 12px;">
+                    <b>CNPJ: 24.222.6444/0001-92</b>
+                    <br>
+                    <b>contato@objetiveti.com.br</b>
+                    <br>
+                    &copy ObjetiveTI, todos os direitos resevados.
+                </p>
+            </div>
+            <div class="chamados">
+                <div class="chamado-item np"></div>
+                <form class="white">
+                    <h4 class="light">Novo Analista</h4>
+                    <h6 class="mini-title"><b>nome</b></h6>
+                    <input type="text" name="nome">
+                    <h6 class="mini-title"><b>e-mail</b></h6>
+                    <input type="text" name="email">
+                    <h6 class="mini-title"><b>senha</b></h6>
+                    <input type="text" name="senha">
+                    <h6 class="mini-title"><b>Nível</b></h6>
+                    <select>
+                        <option>Analista</option>
+                        <option>Gerente</option>
+                        <option>Administrador</option>
+                    </select>
+                    <div class="file-field input-field nm">
+                        <div class="btn light-blue">
+                            <span style="text-transform: capitalize;">
+                                <i class="mdi-image-camera left"></i> Foto
+                            </span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Envie um ou mais arquivos">
+                        </div>
+                    </div>
+                    <div class="right-align">
+                        <button type="submit" class="light-blue white-text">
+                            <i class="mdi-content-add right"></i> Criar
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div id="novoChamado" class="suave">
+                <form class="white suave">
+                    <a class="fechar right light-blue white-text circle click">
+                        <i class="mdi-navigation-close"></i>
+                    </a>
+                    <h6 class="mini-title">
+                        <b>Novo Chamado</b>
+                    </h6>
+                    <input type="text" name="titulodochamado" placeholder="Titulo do chamado">
+                    <input type="text" name="pessoasEnvolvidas" placeholder="Emails relacionados Ex: email_1@email.com , email_2@email.com">
+                    <textarea class="materialize-textarea" placeholder="Descreva sua dificuldade"></textarea>
+                    <div class="file-field input-field nm">
+                        <div class="btn light-blue">
+                            <span style="text-transform: capitalize;">
+                                <i class="mdi-editor-attach-file left"></i> Anexar
+                            </span>
+                            <input type="file" multiple>
+                        </div>
+                        <div class="file-path-wrapper">
+                            <input class="file-path validate" type="text" placeholder="Envie um ou mais arquivos">
+                        </div>
+                    </div>
+                    <select id="n-prioridade">
+                        <option value="#" disabled selected>Nível de Prioridade</option>
+                        <option>Todas</option>
+                        <option>Máxima</option>
+                        <option>Alta</option>
+                        <option>Média</option>
+                        <option>Baixa</option>
+                    </select>
+                    <select id="n-tipo">
+                        <option value="#" disabled selected>Tipo de Solicitação</option>
+                        <option>Todas</option>
+                        <option>Suporte</option>
+                        <option>Consultoria</option>
+                        <option>Solicitação</option>
+                    </select>
+                    <div class="right-align">
+                        <button type="submit" class="light-blue white-text">
+                            <i class="mdi-content-send right"></i> Enviar
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="js/jquery.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/nicescroll.js"></script>
+        <script src="js/script.js"></script>
+    </body>
+</html>
