@@ -1301,6 +1301,27 @@ body :-moz-placeholder { /* Firefox 18- */
 	overflow: auto;
     }
 }
+@media only screen and ( max-width: 480px ){
+    #corpo .chamados .items li{
+        width: calc(100% - 40px);
+    }
+    #corpo .chamados .chamados-header{
+        height: auto;
+    }
+    #corpo .chamados .chamados-header h6{
+        position: relative;
+        text-align: center;
+        display: block;
+    }
+    #corpo .chamados .chamados-header h6:first-child{
+        left: 0;
+    }
+    #corpo .chamados .chamados-header .selecti{
+        float: none;
+        width: calc(100% - 40px);
+        margin-left: 20px;
+    }
+}
 
 /*#corpo .chamados .chamado-chat{
     width: 50%;
