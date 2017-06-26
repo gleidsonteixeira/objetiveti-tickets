@@ -179,6 +179,8 @@ body{
     position: absolute;
     left: 0px;
     top: 25px;
+    opacity: 0;
+    visibility: hidden;
 }
 
 #topo .pesquisa{
@@ -1259,14 +1261,46 @@ body :-moz-placeholder { /* Firefox 18- */
 
 @media only screen and ( max-width: 1024px ){
     #corpo .menu{
+	height: calc(100% - 100px);
+        top: 100px;
         left: -250px;
         position: fixed;
+	background-color: white;
+    }
+    #corpo .menu.active{
+         left: 0;
     }
     #corpo .chamados{
         width: 100%;
     }
+    #topo .logo i{
+        opacity: 1;
+	visibility: visible;
+    }
 }
 
+@media only screen and ( max-width: 764px ){
+    #corpo .chamados .items li{
+        width: calc(50% - 40px);
+    }
+    #corpo .chamados .chamado-item{
+	width: calc(100% - 80px);
+    }
+    #topo .pesquisa{
+	width: calc(100% - 330px);
+    }
+    #corpo #novoChamado form{
+        top: 50px;
+	left: 0;
+	transform: none;
+    }
+    #corpo #novoChamado.active form{
+        top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+    }
+}
 
 /*#corpo .chamados .chamado-chat{
     width: 50%;

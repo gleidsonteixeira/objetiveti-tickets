@@ -1,4 +1,4 @@
-$(document).ready(function(){
+﻿$(document).ready(function(){
     
     $('ul.tabs').tabs();
     $('.tooltipped').tooltip({delay: 10});
@@ -13,7 +13,8 @@ $(document).ready(function(){
     novoChamado();
     verChamadoLista();
     alerts();
-
+    menu();
+    
 })
 $(window).scroll(function(){
     responder();
@@ -185,6 +186,11 @@ function alerts(){
     })
 }
 
+function menu(){
+    $("#topo .logo i").click(function(){
+        $(".menu").toggleClass("active");
+    })
+}
 
 
 /*<div class="chamado-chat">
