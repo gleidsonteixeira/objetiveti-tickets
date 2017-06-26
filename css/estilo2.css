@@ -303,6 +303,7 @@ body{
 #corpo .menu{
     width: 250px;
     height: 100%;
+    overflow: auto;
     position: absolute;
     top: 0;
     left: 0;
@@ -407,6 +408,7 @@ body{
 }
 #corpo .chamados .chamados-header{
     height: 80px;
+    margin-bottom: 20px;
 }
 #corpo .chamados .chamados-header h6{
     line-height: 40px;
@@ -1065,6 +1067,9 @@ body :-moz-placeholder { /* Firefox 18- */
     width: calc(80% - 50px);
     margin-left: 10%;
 }
+#corpo .chamados .items-lista li i.mais{
+    display: none;
+}
 #corpo .chamados .items-lista li i{
     width: 50px;
     height: 60px;
@@ -1279,7 +1284,7 @@ body :-moz-placeholder { /* Firefox 18- */
     }
 }
 
-@media only screen and ( max-width: 764px ){
+@media only screen and ( max-width: 768px ){
     #corpo .chamados .items li{
         width: calc(50% - 40px);
     }
@@ -1300,8 +1305,59 @@ body :-moz-placeholder { /* Firefox 18- */
 	height: 100%;
 	overflow: auto;
     }
+
+    #login .header{
+	display:none;
+    }
+    #login form{
+	left: calc(50% - 150px);
+    }
+
+    #corpo .chamados .items-lista li h6.codigo{
+	width: 15%;
+    }
+    #corpo .chamados .items-lista li h6.titulo {
+        width: calc(55% - 200px);
+    }
+    #corpo .chamados .items-lista li h6.cliente {
+	width: 15%;
+    }
+    #corpo .chamados .items-lista li h6.data {
+	width: 15%;
+    }
 }
 @media only screen and ( max-width: 480px ){
+    #topo .logo{
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+    }
+    #topo .logo i{
+	top: 0;
+    }
+    #topo .pesquisa{
+	width: 100%;
+	height: 50px;
+	background-color: #03a9f4;
+	top: 50px;
+	left: 0;
+    }
+    #topo .pesquisa form{
+	margin: 0 auto;
+    }
+    #topo .notificacoes{
+	top: 6px;
+	right: 0;
+    }
+    #topo .notificacoes ul li{
+	width: 35px;
+	height: 35px;
+    }
+    #topo .notificacoes ul li .content{
+	left: initial;
+	right: 0;
+	transform: none;
+    }
     #corpo .chamados .items li{
         width: calc(100% - 40px);
     }
@@ -1320,6 +1376,169 @@ body :-moz-placeholder { /* Firefox 18- */
         float: none;
         width: calc(100% - 40px);
         margin-left: 20px;
+    }
+    #corpo .chamados .chamados-header .selecti:last-of-type{
+	margin-top: 0;
+    }
+    #corpo .chamados .items{
+	padding: 0;
+    }
+    #corpo .chamados .items-lista,
+    #corpo .chamados .chamado-item,
+    #corpo .chamados .chamado-item + form{
+	width: calc(100% - 40px);
+	margin-left: 20px;
+    }
+    #corpo .chamados .chamado-item + form{
+	padding: 20px 15px;
+    }
+    #corpo .chamados .chamado-item{
+	margin-top: 20px;
+	padding: 20px 15px;
+    }
+    #corpo .chamados .chamado-item h4,
+    #corpo .chamados .items li h4{
+	font-size: 22px;
+	font-weight: normal;
+    }
+    #corpo .chamados .chamado-item .anexos .anexo{
+	width: calc(50% - 2px);
+	margin-right: 0;
+    }
+    #corpo .chamados .chamado-item .anexos .anexo:nth-child(even){
+	margin-left: 4px;
+    }
+    #corpo .chamados .chamado-item .anexos .anexo img{
+	height: 100%;
+    }
+    #corpo .chamados .items-lista li{
+	padding-top: 40px;
+    }
+    #corpo .chamados .items-lista li h6.codigo{
+	width: 50%;
+	line-height: 40px;
+	text-align: left;
+	padding-left: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+    }
+    #corpo .chamados .items-lista li h6.titulo {
+        width: calc(100% - 100px);
+	padding-left: 10px;
+    }
+    #corpo .chamados .items-lista li h6.cliente {
+	display: none;
+    }
+    #corpo .chamados .items-lista li h6.descricao{
+	width: 70%;
+	margin: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	line-height: 40px;
+    }
+    #corpo .chamados .items-lista li .sub li{
+	padding-top: 0;
+    }
+    #corpo .chamados .items-lista li .sub h6.data {
+	width: 30%;
+    }
+    #corpo .chamados .items-lista li h6.data {
+	width: 50%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	line-height: 40px;
+	text-align: right;
+	padding-right: 10px;
+    }
+    #corpo .chamados .items-lista li .actions{
+	width: 100%;
+	height: 60px;
+	background-color: #03a9f4;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+    }
+    #corpo .chamados .items-lista li .actions.active{
+	opacity: 1;
+	visibility: visible;
+    }
+    #corpo .chamados .items-lista li .actions i{
+	width: calc(33.333% - 17px);
+	color: white !important;
+    }
+    #corpo .chamados .items-lista li i.mais{
+	color: white;
+	display: block;
+    }
+    #corpo .chamados .chamado-item h6 span{
+	float: none !important;
+    }
+    #corpo .chamados .chamado-item h6:last-child span{
+	display: block;
+	padding-top: 5px;
+    }
+    #corpo .chamados .items li{
+	padding: 20px 15px;
+    }
+    #corpo .chamados .chamado-item .mini-descricao{
+	font-size: 16px;
+    }
+    #corpo .chamados .chamado-item + form .file-field .file-path-wrapper{
+	width: 100%;
+	height: 55px;
+        padding: 0;
+        padding-top: 10px;
+    }
+    #corpo .chamados .chamado-item + form .btn{
+	width: 100%;
+    }
+    #corpo .chamados .chamado-item + form .btn i{
+	display: none;
+    }
+    #corpo .chamados .chamado-item + form p{
+	height: 65px;
+	margin-bottom: 20px;
+    }
+    #corpo .chamados .chamado-item + form a,
+    #corpo .chamados .chamado-item + form button{
+	width: 100%;
+    }
+    #corpo .chamados .chamado-item + form a{
+	margin-bottom: 10px;
+	text-align: center;
+    }
+    #corpo .chamados .chamado-item + form a i,
+    #corpo .chamados .chamado-item + form button i{
+	display: none;
+    }
+    #corpo #novoChamado{
+	overflow: auto;
+    }
+    #corpo #novoChamado .selecti{
+	float: none;
+	width: 100%;
+    }
+    #corpo #novoChamado.active form button{
+	width: 100%;
+    }
+    #corpo #novoChamado a{
+	margin-right: 0;
+    }
+    #corpo .menu ul li{
+	height: auto;
+    }
+    #corpo .menu ul li ul{
+	position: relative;
+	left: 0;
+	display: none;
+    }
+    #corpo .menu ul li:hover ul{
+	display: block;
+	left: 0;
     }
 }
 

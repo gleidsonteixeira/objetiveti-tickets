@@ -135,28 +135,32 @@ function novoChamado(){
 }
 
 function verChamadoLista(){
-    $(".items-lista li").click(function(){
-        var a = $(this).attr("data-state");
+    $(".items-lista li i.click").click(function(){
+        var a = $(this).offsetParent().attr("data-state");
         
         $(".items-lista li").each(function(){
             $(this).removeClass("active");
-            $(this).find("i").removeClass("mdi-content-remove-circle");
-            $(this).find("i").addClass("mdi-content-add-circle");
+            $(this).find("i.click").removeClass("mdi-content-remove-circle");
+            $(this).find("i.click").addClass("mdi-content-add-circle");
             $(this).attr("data-state", 0);
         })
         
         if(a == 0){
-            $(this).addClass("active");
-            $(this).find("i").removeClass("mdi-content-add-circle");
-            $(this).find("i").addClass("mdi-content-remove-circle");
-            $(this).attr("data-state", 1);
+            $(this).offsetParent().addClass("active");
+            $(this).offsetParent().find("i.click").removeClass("mdi-content-add-circle");
+            $(this).offsetParent().find("i.click").addClass("mdi-content-remove-circle");
+            $(this).offsetParent().attr("data-state", 1);
         }else{
-            $(this).removeClass("active");
-            $(this).find("i").removeClass("mdi-content-remove-circle");
-            $(this).find("i").addClass("mdi-content-add-circle");
-            $(this).attr("data-state", 0);
+            $(this).offsetParent().removeClass("active");
+            $(this).offsetParent().find("i.click").removeClass("mdi-content-remove-circle");
+            $(this).offsetParent().find("i.click").addClass("mdi-content-add-circle");
+            $(this).offsetParent().attr("data-state", 0);
         }
         
+    })
+    $(".items-lista li i.mais").click(function(){
+	$(this).offsetParent().find(".actions").toggleClass("active");
+	$(this).toggleClass("light-blue-text");
     })
 }
 
